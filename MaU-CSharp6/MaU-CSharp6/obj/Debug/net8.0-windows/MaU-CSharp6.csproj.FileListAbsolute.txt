@@ -1,0 +1,16 @@
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\bin\Debug\net8.0-windows\MaU-CSharp6.exe
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\bin\Debug\net8.0-windows\MaU-CSharp6.deps.json
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\bin\Debug\net8.0-windows\MaU-CSharp6.runtimeconfig.json
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\bin\Debug\net8.0-windows\MaU-CSharp6.dll
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\bin\Debug\net8.0-windows\MaU-CSharp6.pdb
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.csproj.GenerateResource.cache
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.AssemblyInfoInputs.cache
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.AssemblyInfo.cs
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.csproj.CoreCompileInputs.cache
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.dll
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\refint\MaU-CSharp6.dll
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.pdb
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.genruntimeconfig.cache
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\ref\MaU-CSharp6.dll
+E:\Code\MaU-CSharp6\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU_CSharp6.MainForm.resources
