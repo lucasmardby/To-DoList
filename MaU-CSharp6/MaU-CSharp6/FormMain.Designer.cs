@@ -41,10 +41,18 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button2 = new Button();
-            button3 = new Button();
+            btnEdit = new Button();
+            btnDelete = new Button();
             menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            newToolStripMenuItem = new ToolStripMenuItem();
+            openDataFileToolStripMenuItem = new ToolStripMenuItem();
+            saveDataFileToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lstToDo
@@ -53,8 +61,9 @@
             lstToDo.ItemHeight = 15;
             lstToDo.Location = new Point(6, 42);
             lstToDo.Name = "lstToDo";
-            lstToDo.Size = new Size(812, 184);
+            lstToDo.Size = new Size(743, 184);
             lstToDo.TabIndex = 0;
+            lstToDo.SelectedIndexChanged += lstToDo_SelectedIndexChanged;
             // 
             // groupBox1
             // 
@@ -65,7 +74,7 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Location = new Point(12, 152);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(824, 241);
+            groupBox1.Size = new Size(755, 241);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "To Do";
@@ -91,7 +100,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(274, 19);
+            label6.Location = new Point(242, 19);
             label6.Name = "label6";
             label6.Size = new Size(45, 15);
             label6.TabIndex = 10;
@@ -100,7 +109,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(183, 19);
+            label5.Location = new Point(168, 19);
             label5.Name = "label5";
             label5.Size = new Size(34, 15);
             label5.TabIndex = 9;
@@ -108,22 +117,25 @@
             // 
             // dtpDateTime
             // 
-            dtpDateTime.Location = new Point(110, 23);
+            dtpDateTime.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDateTime.Format = DateTimePickerFormat.Custom;
+            dtpDateTime.Location = new Point(110, 33);
             dtpDateTime.Name = "dtpDateTime";
-            dtpDateTime.Size = new Size(200, 23);
+            dtpDateTime.Size = new Size(278, 21);
             dtpDateTime.TabIndex = 2;
             // 
             // cmbPriority
             // 
+            cmbPriority.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPriority.FormattingEnabled = true;
-            cmbPriority.Location = new Point(406, 23);
+            cmbPriority.Location = new Point(526, 33);
             cmbPriority.Name = "cmbPriority";
             cmbPriority.Size = new Size(121, 23);
             cmbPriority.TabIndex = 3;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(195, 111);
+            btnAdd.Location = new Point(195, 121);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(115, 23);
             btnAdd.TabIndex = 4;
@@ -133,7 +145,7 @@
             // 
             // txtToDo
             // 
-            txtToDo.Location = new Point(110, 70);
+            txtToDo.Location = new Point(110, 80);
             txtToDo.Name = "txtToDo";
             txtToDo.Size = new Size(417, 23);
             txtToDo.TabIndex = 5;
@@ -141,7 +153,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(19, 29);
+            label1.Location = new Point(19, 39);
             label1.Name = "label1";
             label1.Size = new Size(83, 15);
             label1.TabIndex = 6;
@@ -150,7 +162,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(19, 73);
+            label2.Location = new Point(19, 83);
             label2.Name = "label2";
             label2.Size = new Size(64, 15);
             label2.TabIndex = 7;
@@ -159,45 +171,92 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(335, 29);
+            label3.Location = new Point(455, 39);
             label3.Name = "label3";
             label3.Size = new Size(45, 15);
             label3.TabIndex = 8;
             label3.Text = "Priority";
             // 
-            // button2
+            // btnEdit
             // 
-            button2.Location = new Point(61, 411);
-            button2.Name = "button2";
-            button2.Size = new Size(115, 23);
-            button2.TabIndex = 9;
-            button2.Text = "Edit";
-            button2.UseVisualStyleBackColor = true;
+            btnEdit.Location = new Point(61, 411);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(115, 23);
+            btnEdit.TabIndex = 9;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
-            // button3
+            // btnDelete
             // 
-            button3.Location = new Point(265, 411);
-            button3.Name = "button3";
-            button3.Size = new Size(115, 23);
-            button3.TabIndex = 10;
-            button3.Text = "Cancel";
-            button3.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(265, 411);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(115, 23);
+            btnDelete.TabIndex = 10;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // menuStrip1
             // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(848, 24);
+            menuStrip1.Size = new Size(778, 24);
             menuStrip1.TabIndex = 11;
             menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openDataFileToolStripMenuItem, saveDataFileToolStripMenuItem, exitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            newToolStripMenuItem.Name = "newToolStripMenuItem";
+            newToolStripMenuItem.Size = new Size(148, 22);
+            newToolStripMenuItem.Text = "New";
+            // 
+            // openDataFileToolStripMenuItem
+            // 
+            openDataFileToolStripMenuItem.Name = "openDataFileToolStripMenuItem";
+            openDataFileToolStripMenuItem.Size = new Size(148, 22);
+            openDataFileToolStripMenuItem.Text = "Open data file";
+            // 
+            // saveDataFileToolStripMenuItem
+            // 
+            saveDataFileToolStripMenuItem.Name = "saveDataFileToolStripMenuItem";
+            saveDataFileToolStripMenuItem.Size = new Size(148, 22);
+            saveDataFileToolStripMenuItem.Text = "Save data file";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(148, 22);
+            exitToolStripMenuItem.Text = "Exit";
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(107, 22);
+            aboutToolStripMenuItem.Text = "About";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(848, 460);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            ClientSize = new Size(778, 460);
+            Controls.Add(btnDelete);
+            Controls.Add(btnEdit);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -207,11 +266,15 @@
             Controls.Add(dtpDateTime);
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "To-Do List, by Lucas Mårdby";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -231,8 +294,15 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Button button2;
-        private Button button3;
+        private Button btnEdit;
+        private Button btnDelete;
         private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem newToolStripMenuItem;
+        private ToolStripMenuItem openDataFileToolStripMenuItem;
+        private ToolStripMenuItem saveDataFileToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

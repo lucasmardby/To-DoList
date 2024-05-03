@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj": {}
+    "E:\\Code\\MaU-CSharp6\\To-DoList\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj": {}
   },
   "projects": {
-    "E:\\Code\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj": {
+    "E:\\Code\\MaU-CSharp6\\To-DoList\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj",
+        "projectUniqueName": "E:\\Code\\MaU-CSharp6\\To-DoList\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj",
         "projectName": "MaU-CSharp6",
-        "projectPath": "E:\\Code\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj",
+        "projectPath": "E:\\Code\\MaU-CSharp6\\To-DoList\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\MaU-CSharp6\\MaU-CSharp6\\MaU-CSharp6\\obj\\",
+        "outputPath": "E:\\Code\\MaU-CSharp6\\To-DoList\\MaU-CSharp6\\MaU-CSharp6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

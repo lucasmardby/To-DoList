@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MaU-CSharp6")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65829efcd13bbf0041d1018f9a6246e348079469")]
 [assembly: System.Reflection.AssemblyProductAttribute("MaU-CSharp6")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MaU-CSharp6")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
