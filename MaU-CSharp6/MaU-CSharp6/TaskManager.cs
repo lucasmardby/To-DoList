@@ -60,5 +60,14 @@
         {
             return $"{Tasks[index].TaskDate.Hour}:{Tasks[index].TaskDate.Minute}";
         }
+
+        public bool ReadDataFromFile(string fileName)
+        {
+            FileManager fileManager = new FileManager();
+
+            //return fileManager.ReadTas
+
+            return true;
+        }
     }
 }

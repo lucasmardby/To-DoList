@@ -31,3 +31,4 @@ E:\Code\MaU-CSharp6\To-DoList\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\r
 E:\Code\MaU-CSharp6\To-DoList\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.pdb
 E:\Code\MaU-CSharp6\To-DoList\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU-CSharp6.genruntimeconfig.cache
 E:\Code\MaU-CSharp6\To-DoList\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\ref\MaU-CSharp6.dll
+E:\Code\MaU-CSharp6\To-DoList\MaU-CSharp6\MaU-CSharp6\obj\Debug\net8.0-windows\MaU_CSharp6.AboutBox1.resources

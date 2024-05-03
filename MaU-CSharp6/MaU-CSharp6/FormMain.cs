@@ -2,8 +2,10 @@ namespace MaU_CSharp6
 {
     public partial class MainForm : Form
     {
-        private TaskManager taskManager = new TaskManager();
+        private TaskManager taskManager;
         private Task currentTask;
+
+        string fileName = Application.StartupPath + "\\Tasks.txt";
 
         public MainForm()
         {
@@ -13,9 +15,17 @@ namespace MaU_CSharp6
 
         private void InitializeGUI()
         {
-            lstToDo.Items.Clear();
-            txtToDo.Text = string.Empty;
+            this.Text = "To-Do List, by Lucas Mårdby";
+
+            taskManager = new TaskManager();
+
             cmbPriority.DataSource = Enum.GetValues(typeof(PriorityType));
+            cmbPriority.SelectedIndex = (int)PriorityType.Normal;
+
+            lstToDo.Items.Clear();
+
+            txtToDo.Text = string.Empty;
+
             dtpDateTime.Format = DateTimePickerFormat.Custom;
             dtpDateTime.CustomFormat = "yyyy-MM-dd  HH:mm";
 
@@ -101,5 +111,35 @@ namespace MaU_CSharp6
             btnEdit.Visible = true;
             btnDelete.Visible = true;
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InitializeGUI();
+        }
+
+        private void openDataFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveDataFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string errorMessage = "Something went wrong while saving data to file";
+
+            //bool ok = taskManager.WriteDataToFile(fileName);
+
+
+
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Sure you want to exit?", "Cancel", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Close();
+            }
+        }
+
     }
 }
