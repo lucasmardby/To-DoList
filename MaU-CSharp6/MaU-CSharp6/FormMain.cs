@@ -126,11 +126,15 @@ namespace MaU_CSharp6
         {
             string errorMessage = "Something went wrong while saving data to file";
 
-            //bool ok = taskManager.WriteDataToFile(fileName);
-
-
-
-
+            bool ok = taskManager.WriteDataToFile(fileName);
+            if (!ok)
+            {
+                MessageBox.Show(errorMessage);
+            }
+            else 
+            {
+                UpdateGUI();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

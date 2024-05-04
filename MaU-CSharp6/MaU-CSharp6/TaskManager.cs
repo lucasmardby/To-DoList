@@ -61,11 +61,19 @@
             return $"{Tasks[index].TaskDate.Hour}:{Tasks[index].TaskDate.Minute}";
         }
 
-        public bool ReadDataFromFile(string fileName)
+        public bool ReadDataToFile(string fileName)
         {
             FileManager fileManager = new FileManager();
 
-            //return fileManager.ReadTas
+            //return fileManager.ReadTaskListFromFile(taskList, fileName)
+
+            return true;
+        }
+        public bool WriteDataToFile(string fileName)
+        {
+            FileManager fileManager = new FileManager();
+
+            //return fileManager.SaveTaskListFromFile(taskList, fileName)
 
             return true;
         }
