@@ -119,12 +119,22 @@ namespace MaU_CSharp6
 
         private void openDataFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string errorMessage = "Something went wrong while saving data to file";
 
+            bool ok = taskManager.ReadDataToFile(fileName);
+            if (!ok)
+            {
+                MessageBox.Show(errorMessage);
+            }
+            else
+            {
+                MessageBox.Show("Data saved to file:" + Environment.NewLine + fileName);
+            }
         }
 
         private void saveDataFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string errorMessage = "Something went wrong while saving data to file";
+            string errorMessage = "Something went wrong when opening the file";
 
             bool ok = taskManager.WriteDataToFile(fileName);
             if (!ok)

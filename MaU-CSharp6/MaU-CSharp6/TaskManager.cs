@@ -2,17 +2,17 @@
 {
     internal class TaskManager
     {
-        private List<Task> tasks;
+        private List<Task> taskList;
 
         public TaskManager()
         { 
-            tasks = new List<Task>();
+            taskList = new List<Task>();
         }
 
         public List<Task> Tasks
         {
-            get { return tasks; }
-            set { tasks = value; }
+            get { return taskList; }
+            set { taskList = value; }
         }
 
         public void AddTask(Task task)
@@ -65,17 +65,13 @@
         {
             FileManager fileManager = new FileManager();
 
-            //return fileManager.ReadTaskListFromFile(taskList, fileName)
-
-            return true;
+            return fileManager.ReadTaskListFromFile(taskList, fileName);
         }
         public bool WriteDataToFile(string fileName)
         {
             FileManager fileManager = new FileManager();
 
-            //return fileManager.SaveTaskListFromFile(taskList, fileName)
-
-            return true;
+            return fileManager.SaveTaskListToFile(taskList, fileName);
         }
     }
 }
